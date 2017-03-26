@@ -5,13 +5,10 @@ This program should be able to predict where you are going to place an X and win
 	To do list:
 		Create the gui to show the board
 		Create a way to update the board with an 'x' ore 'o'
-		
-		
+
+
 
 '''
-
-
-
 
 import random
 
@@ -185,7 +182,7 @@ def First_move(place1,place2,place3,place4,place5,place6,place7,place8,place9):
 			return 8
 		elif RandNum == 7:
 			return 9
-		else: 
+		else:
 			return 0
 	elif place8 in ['X']:
 		if RandNum == 0:
@@ -228,7 +225,7 @@ def First_move(place1,place2,place3,place4,place5,place6,place7,place8,place9):
 gameGUI()
 while True:
 
-	
+
 	if Gamemode in ['2','two']:
 		turn = input("Where do you want to go player 1?")
 		if turn in ['top left']:
@@ -252,14 +249,14 @@ while True:
 		else:
 			print("Wrong")
 		gameGUI()
-		
+
 		if Winner(0,'Player 1 WINS!!!!','PLayer 2 WINS!!!!')>0:
 			if Winner(0,'Player 1 WINS!!!!','PLayer 2 WINS!!!!')==1:
 				print('Player 1 Wins!!!!')
 			elif Winner(0,'Player 1 WINS!!!!','PLayer 2 WINS!!!!')==2:
 				print('Player 2 Wins!!!!')
 			break
-		
+
 		turn = input("Where do you want to go player 2?")
 		if turn in ['top left']:
 			place1 = 'O'
@@ -312,7 +309,7 @@ while True:
 			place9 = 'X'
 		else:
 			print("Wrong")
-			
+
 		if First_move(place1,place2,place3,place4,place5,place6,place7,place8,place9) == 1:
 			place1 = 'O'
 		elif First_move(place1,place2,place3,place4,place5,place6,place7,place8,place9) == 2:
@@ -335,17 +332,17 @@ while True:
 			print('No')
 
 		gameGUI()
-		
+
 		if Winner(0,'Player 1 WINS!!!!','PLayer 2 WINS!!!!')>0:
 			if Winner(0,'Player 1 WINS!!!!','PLayer 2 WINS!!!!')==1:
 				print('You win!!!!')
 			elif Winner(0,'Player 1 WINS!!!!','PLayer 2 WINS!!!!')==2:
 				print('The computer beat you!!!!')
 			break
-		
 
-		
-	
-	
+
+
+
+
 
 input("HEL")
