@@ -29,9 +29,8 @@ def TwoPlayer(places, player):
     Person = (int(player)%2)
     if Person == 1:
         Person = 1
-        Person = 2
     elif Person == 0:
-
+        Person = 2
 
     selectedPlace = input("Where do you want to go player " + str(Person) + "?")
 
@@ -61,17 +60,21 @@ def TwoPlayer(places, player):
 
 #Find another way of doing this.
 def Winner(places):
-    if places[0] and places[1] and places[2] in ["X"]:
-        print("You won player 1")
-    elif places[3] and places[4] and palces[5] in ["X"]:
-        print("You wone player 1")
-    elif places[6] and places[7] and place[8] in ["X"]:
-        print("Player 1 won")
-    elif places[0] and places[4] and places[8] in ["X"]:
-        print("Player 1 won")
-    elif places[2] and places[4] and palces[6] in ["X"]:
-        print("Player 1 won")
-    elif places[1] and places[4] and places[7] in ["X"]:
-        print("Player 1 won")
-    elif places[0] and places[3] and places[6] in ["X"]:
-        print("Player 1 won")
+    if places[0] == places[1] == places [2] == "O" or places[3] == places[4] == places[5] == "O" or places[6] == places[7] == places[8] == "O":
+        print("Player 2 has won")
+        return True
+    elif places[0] == places[3] == places[6] == "O" or places[1] == places[4] == places[7] == "O" or places[2] == places[5] == places[8] == "O":
+        print("Player 2 has won")
+        return True
+    elif places[0] == places[4] == places[8] == "O" or places[2] == places[4] == places[6] == "O":
+        print("Player 2 has won")
+        return True
+    elif places[0] == places[1] == places [2] == "X" or places[3] == places[4] == places[5] == "X" or places[6] == places[7] == places[8] == "X":
+        print("Player 1 has won")
+        return True
+    elif places[0] == places[3] == places[6] == "X" or places[1] == places[4] == places[7] == "X" or places[2] == places[5] == places[8] == "X":
+        print("Player 1 has won")
+        return True
+    elif places[0] == places[4] == places[8] == "X" or places[2] == places[4] == places[6] == "X":
+        print("Player 1 has won")
+        return True

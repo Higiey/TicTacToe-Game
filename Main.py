@@ -15,8 +15,7 @@ if players in ["1", "one", "One"]:
 
 elif players in ["2", "Two", "two"]:
     print("You have chosen two player game")
-    while True:
+    while not Winner(places):
         player += 1
         gameGUI(places)
         places = TwoPlayer(places, player)
-        #Winner(places)
