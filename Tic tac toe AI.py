@@ -1,14 +1,14 @@
-'''
-This program should be able to predict where you are going to place an X and win most of the time
-	However this will be difficult as it will need to take into account where the past moves are and where future
-		moves will be, I will need to find a way to overcome this.
-	To do list:
-		Create the gui to show the board
-		Create a way to update the board with an 'x' ore 'o'
-
-
-
-'''
+#'''
+#This program should be able to predict where you are going to place an X and win most of the time
+#	However this will be difficult as it will need to take into account where the past moves are and where future
+#		moves will be, I will need to find a way to overcome this.
+#	To do list:
+#		Create the gui to show the board
+#		Create a way to update the board with an 'x' ore 'o'
+#
+#
+#
+#
 
 import random
 
