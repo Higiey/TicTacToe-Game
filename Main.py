@@ -1,18 +1,9 @@
 import random
 from Functions import *
-place1 = ""
-place2 = ""
-place3 = ""
-place4 = ""
-place5 = ""
-place6 = ""
-place7 = ""
-place8 = ""
-place9 = ""
 
 player = 0
 
-places = [place1, place2, place3, place4, place5, place6, place7, place8, place9]
+places = ["","","","","","","","",""]
 
 print("Welcome to the Tic-Tac-Toe game")
 
@@ -27,5 +18,5 @@ elif players in ["2", "Two", "two"]:
     while True:
         player += 1
         gameGUI(places)
-        TwoPlayer(places, player)
-        Winner(places)
+        places = TwoPlayer(places, player)
+        #Winner(places)

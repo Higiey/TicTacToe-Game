@@ -18,8 +18,7 @@ def gameGUI(places):
     print("-"*55)
 
 def TwoPlayer(places, player):
-    PlayerID = ""
-    selectedPlace = input("Where do you want to go player 1?")
+    PlayerId = ""
     if player%2 == 0:
         PlayerId = "O"
     elif player%2 != 0:
@@ -27,36 +26,38 @@ def TwoPlayer(places, player):
     else:
         print("This didn't work")
 
+    Person = (int(player)%2)
+    if Person == 1:
+        Person = 1
+        Person = 2
+    elif Person == 0:
+
+
+    selectedPlace = input("Where do you want to go player " + str(Person) + "?")
+
+
+
     if selectedPlace in ["top left"] and places[0] == "":
         places[0] = PlayerId
-        return places[0]
     elif selectedPlace in ["top middle"] and places[1] == "":
         places[1] = PlayerId
-        return places[1]
     elif selectedPlace in ["top right"] and places[2] == "":
         places[2] = PlayerId
-        return places[2]
     elif selectedPlace in ["middle left"] and places[3] == "":
         places[3] = PlayerId
-        return places[3]
     elif selectedPlace in ["middle"] and places[4] == "":
         places[4] = PlayerId
-        return places[4]
     elif selectedPlace in ["middle right"] and places[5] == "":
         places[5] = PlayerId
-        return places[5]
     elif selectedPlace in ["bottom left"] and places[6] == "":
         places[6] = PlayerId
-        return places[6]
     elif selectedPlace in ["bottom middle"] and places[7] == "":
         places[7] = PlayerId
-        return places[7]
     elif selectedPlace in ["bottom right"] and places[8] == "":
         places[8] = PlayerId
-        return places[8]
     else:
         print("Please try again, Invalid input")
-
+    return places
 
 #Find another way of doing this.
 def Winner(places):
