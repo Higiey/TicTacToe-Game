@@ -10,7 +10,7 @@ place7 = ""
 place8 = ""
 place9 = ""
 
-player = 1
+player = 0
 
 places = [place1, place2, place3, place4, place5, place6, place7, place8, place9]
 
@@ -28,3 +28,4 @@ elif players in ["2", "Two", "two"]:
         player += 1
         gameGUI(places)
         TwoPlayer(places, player)
+        Winner(places)
