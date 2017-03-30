@@ -55,6 +55,7 @@ def TwoPlayer(places, player):
     return places
 
 def SinglePlayer(places):
+    gameGUI(places)
     selectedPlace = input("Where would to like to go? : ")
     if selectedPlace in ["top left"] and places[0] == "":
         places[0] = "O"
@@ -76,7 +77,9 @@ def SinglePlayer(places):
         places[8] = "O"
     else:
         print("Please try again, Invalid input")
+
     return places
+
 
 def Winner(places):
     if places[0] == places[1] == places [2] == "O" or places[3] == places[4] == places[5] == "O" or places[6] == places[7] == places[8] == "O":

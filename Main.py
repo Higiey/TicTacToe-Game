@@ -13,7 +13,6 @@ if players in ["1", "one", "One"]:
     while not WinnerAi(places):
         places = Ai(places)
         gameGUI(places)
-        places = SinglePlayer(places)
 
 elif players in ["2", "Two", "two"]:
     print("You have chosen two player game")
